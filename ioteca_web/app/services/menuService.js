@@ -98,11 +98,11 @@ app
             state: 'catalogo.catalogo',
             menu_items: [{
                 title: 'Categorías',
-                state: 'catalogo.catalogo.categorias',
+                state: 'catalogo.catalogo.cliente',
                 type: 'link'
             }, {
                 title: 'Autores',
-                state: 'catalogo.catalogo.autores',
+                state: 'catalogo.catalogo.producto',
                 type: 'link'
             }, ]
         }]

@@ -3,18 +3,18 @@ from django.db.models import Q
 from operator import __or__ as OR
 from functools import reduce
 
-from ioteca_service_apps.catalogo.models.categoria import Categoria
+from ioteca_service_apps.catalogo.models.distribuidor import Distribuidor
 
 
-class CategoriaSerializer(serializers.ModelSerializer):
+class DistribuidorSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Categoria
+        model = Distribuidor
         # fields = ('url', 'username', 'email', 'is_staff')
 
 
-class CategoriaViewSet(viewsets.ModelViewSet):
-    queryset = Categoria.objects.all()
-    serializer_class = CategoriaSerializer
+class DistribuidorViewSet(viewsets.ModelViewSet):
+    queryset = Distribuidor.objects.all()
+    serializer_class = DistribuidorSerializer
 
     def get_queryset(self):
         query = self.request.query_params.get('query', '')

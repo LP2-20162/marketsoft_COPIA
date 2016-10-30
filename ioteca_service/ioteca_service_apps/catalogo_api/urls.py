@@ -1,15 +1,17 @@
 from django.conf.urls import url, include
 from rest_framework import routers
 
-from .categoria_view import CategoriaViewSet
-from .autor_view import AutorViewSet
-from .libro_view import LibroViewSet
+from .distribuidor_view import DistribuidorViewSet
+from .cliente_view import ClienteViewSet
+from .empresa_view import EmpresaViewSet
+from .producto_view import ProductoViewSet
 
 router = routers.DefaultRouter()
 
-router.register(r'categorias', CategoriaViewSet)
-router.register(r'autors', AutorViewSet, 'autors-view')
-router.register(r'libros', LibroViewSet, 'libros-view')
+router.register(r'discribuidor', DistribuidorViewSet, 'distribuidor-view')
+router.register(r'cliente', ClienteViewSet, 'cliente-view')
+router.register(r'empresa', EmpresaViewSet, 'empresa-view')
+router.register(r'producto', ProductoViewSet, 'producto-view')
 
 urlpatterns = [
 
