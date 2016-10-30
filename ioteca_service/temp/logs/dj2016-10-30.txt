@@ -671,3 +671,889 @@
             ORDER BY name; args=None
 [2016-10-30 01:10:49] DEBUG [django.db.backends:89] (0.000) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
 [2016-10-30 01:12:48] DEBUG [django.db.backends:89] (0.002) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."client_id" = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61'; args=('1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61',)
+[2016-10-30 09:13:49] DEBUG [django.db.backends:89] (0.004) 
+            SELECT name, type FROM sqlite_master
+            WHERE type in ('table', 'view') AND NOT name='sqlite_sequence'
+            ORDER BY name; args=None
+[2016-10-30 09:13:49] DEBUG [django.db.backends:89] (0.001) SELECT "django_migrations"."app", "django_migrations"."name" FROM "django_migrations"; args=()
+[2016-10-30 09:14:14] WARNING [django.request:182] Not Found: /
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': '', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-10-30 09:14:14] WARNING [django.request:182] Not Found: /favicon.ico
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-10-30 09:14:14] WARNING [django.request:182] Not Found: /favicon.ico
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in '<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>'
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\django\\\\contrib\\\\admindocs\\\\urls.py'> (None:None) ^admin/doc/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'rest_framework.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\rest_framework\\\\urls.py'> (rest_framework:rest_framework) ^api-auth/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ve_market\\\\lib\\\\site-packages\\\\oauth2_provider\\\\urls.py'> (None:oauth2_provider) ^o/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\auths_api\\\\urls.py'> (None:None) ^api/auths/>"
+[2016-10-30 09:14:14] DEBUG [django.template:927] Exception while resolving variable 'name' in template 'unknown'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\handlers\base.py", line 134, in get_response
+    resolver_match = resolver.resolve(request.path_info)
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\core\urlresolvers.py", line 404, in resolve
+    raise Resolver404({'tried': tried, 'path': new_path})
+django.core.urlresolvers.Resolver404: {'path': 'favicon.ico', 'tried': [[<RegexURLResolver <RegexURLPattern list> (admin:admin) ^admin/>], [<RegexURLResolver <module 'django.contrib.admindocs.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\django\\contrib\\admindocs\\urls.py'> (None:None) ^admin/doc/>], [<RegexURLResolver <module 'rest_framework.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\rest_framework\\urls.py'> (rest_framework:rest_framework) ^api-auth/>], [<RegexURLResolver <module 'oauth2_provider.urls' from 'D:\\pydev\\marketsoft\\ve_market\\lib\\site-packages\\oauth2_provider\\urls.py'> (None:oauth2_provider) ^o/>], [<RegexURLResolver <module 'ioteca_service_apps.auths_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\auths_api\\urls.py'> (None:None) ^api/auths/>], [<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\pydev\\marketsoft\\ioteca_service\\ioteca_service_apps\\catalogo_api\\urls.py'> (None:None) ^api/catalogo/>]]}
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+TypeError: 'RegexURLResolver' object is not subscriptable
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 891, in _resolve_lookup
+    current = getattr(current, bit)
+AttributeError: 'RegexURLResolver' object has no attribute 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'name'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [name] in "<RegexURLResolver <module 'ioteca_service_apps.catalogo_api.urls' from 'D:\\\\pydev\\\\marketsoft\\\\ioteca_service\\\\ioteca_service_apps\\\\catalogo_api\\\\urls.py'> (None:None) ^api/catalogo/>"
+[2016-10-30 09:14:32] DEBUG [django.db.backends:89] (0.002) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-10-30 14:14:32.291133' AND "django_session"."session_key" = '054wzp4e8b45ymwnaf60v9fxcagm9pch'); args=('2016-10-30 14:14:32.291133', '054wzp4e8b45ymwnaf60v9fxcagm9pch')
+[2016-10-30 09:14:32] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05125EB0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05263C50>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x05125F90>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0517B150>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x051CA490>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'app_path': '/admin/login/?next=/admin/', 'next': '/admin/', 'available_apps': [], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Log in'}]"
+[2016-10-30 09:14:32] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05125EB0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05263C50>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x05125F90>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0517B150>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x051CA490>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'app_path': '/admin/login/?next=/admin/', 'next': '/admin/', 'available_apps': [], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Log in'}]"
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.003) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."username" = 'admin'; args=('admin',)
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.001) SELECT (1) AS "a" FROM "django_session" WHERE "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94' LIMIT 1; args=('pgck2gscn0q13d5polvhhon9bqdj1b94',)
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.003) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'pgck2gscn0q13d5polvhhon9bqdj1b94', 'MWM0OGIyODQ4NzI4MzRhZjAyMjIxNmY1YzZlNzUwYmUzNTU2OWFjMTp7fQ==', '2016-11-13 14:14:39.367975'; args=('pgck2gscn0q13d5polvhhon9bqdj1b94', 'MWM0OGIyODQ4NzI4MzRhZjAyMjIxNmY1YzZlNzUwYmUzNTU2OWFjMTp7fQ==', '2016-11-13 14:14:39.367975')
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.008) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94'; args=('pgck2gscn0q13d5polvhhon9bqdj1b94',)
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.060) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('pgck2gscn0q13d5polvhhon9bqdj1b94'); args=('pgck2gscn0q13d5polvhhon9bqdj1b94',)
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[2016-10-30 09:14:39] DEBUG [django.db.backends:89] (0.002) UPDATE "auths_user" SET "last_login" = '2016-10-30 14:14:39.970343' WHERE "auths_user"."id" = '4c7e4779b6bd47198afbd9e574b13d0a'; args=('2016-10-30 14:14:39.970343', '4c7e4779b6bd47198afbd9e574b13d0a')
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.001) UPDATE "django_session" SET "session_data" = 'MDZhM2VjOTg3ZjZhYTU4Njk0YjI2OWZjMDY2NDhhNDkzYzViOTUxMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjU1N2Q0ZDRkNzk3ODU4ZGFiZGQ0YTQ5ZjYxZDA0ODM4NDAzNjk0ZmUiLCJfYXV0aF91c2VyX2lkIjoiNGM3ZTQ3NzktYjZiZC00NzE5LThhZmItZDllNTc0YjEzZDBhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', "expire_date" = '2016-11-13 14:14:40.228738' WHERE "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94'; args=('MDZhM2VjOTg3ZjZhYTU4Njk0YjI2OWZjMDY2NDhhNDkzYzViOTUxMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjU1N2Q0ZDRkNzk3ODU4ZGFiZGQ0YTQ5ZjYxZDA0ODM4NDAzNjk0ZmUiLCJfYXV0aF91c2VyX2lkIjoiNGM3ZTQ3NzktYjZiZC00NzE5LThhZmItZDllNTc0YjEzZDBhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2016-11-13 14:14:40.228738', 'pgck2gscn0q13d5polvhhon9bqdj1b94')
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.002) INSERT INTO "django_session" ("session_key", "session_data", "expire_date") SELECT 'pgck2gscn0q13d5polvhhon9bqdj1b94', 'MDZhM2VjOTg3ZjZhYTU4Njk0YjI2OWZjMDY2NDhhNDkzYzViOTUxMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjU1N2Q0ZDRkNzk3ODU4ZGFiZGQ0YTQ5ZjYxZDA0ODM4NDAzNjk0ZmUiLCJfYXV0aF91c2VyX2lkIjoiNGM3ZTQ3NzktYjZiZC00NzE5LThhZmItZDllNTc0YjEzZDBhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2016-11-13 14:14:40.228738'; args=('pgck2gscn0q13d5polvhhon9bqdj1b94', 'MDZhM2VjOTg3ZjZhYTU4Njk0YjI2OWZjMDY2NDhhNDkzYzViOTUxMzp7Il9hdXRoX3VzZXJfaGFzaCI6IjU1N2Q0ZDRkNzk3ODU4ZGFiZGQ0YTQ5ZjYxZDA0ODM4NDAzNjk0ZmUiLCJfYXV0aF91c2VyX2lkIjoiNGM3ZTQ3NzktYjZiZC00NzE5LThhZmItZDllNTc0YjEzZDBhIiwiX2F1dGhfdXNlcl9iYWNrZW5kIjoiZGphbmdvLmNvbnRyaWIuYXV0aC5iYWNrZW5kcy5Nb2RlbEJhY2tlbmQifQ==', '2016-11-13 14:14:40.228738')
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.004) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-10-30 14:14:40.420913' AND "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94'); args=('2016-10-30 14:14:40.420913', 'pgck2gscn0q13d5polvhhon9bqdj1b94')
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.001) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '4c7e4779b6bd47198afbd9e574b13d0a'; args=('4c7e4779b6bd47198afbd9e574b13d0a',)
+[2016-10-30 09:14:40] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05294B10>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05274E50>, 'user': <SimpleLazyObject: <User: admin>>, 'request': <WSGIRequest: GET '/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0529A3D8>>}, {}, {'app_list': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294410>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294650>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052942F0>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052941D0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294490>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294790>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052940F0>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051331B0>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294110>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294030>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294290>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052942B0>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294390>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294270>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294BB0>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052940D0>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294350>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294470>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'LANGUAGE_BIDI': False, 'available_apps': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146D50>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146230>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05125E90>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146FB0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146E30>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146F50>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051CA4D0>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146910>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051CA6F0>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051460D0>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051462D0>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146050>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294130>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05153DD0>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294610>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146630>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146A10>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051465F0>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D90>}]"
+[2016-10-30 09:14:40] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/index.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05294B10>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05274E50>, 'user': <SimpleLazyObject: <User: admin>>, 'request': <WSGIRequest: GET '/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0529A3D8>>}, {}, {'app_list': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294410>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294650>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052942F0>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052941D0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294490>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294790>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052940F0>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051331B0>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294110>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294030>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294290>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052942B0>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294390>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294270>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294BB0>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052940D0>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294350>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294470>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'LANGUAGE_BIDI': False, 'available_apps': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146D50>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146230>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05125E90>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146FB0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146E30>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146F50>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051CA4D0>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146910>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051CA6F0>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051460D0>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051462D0>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146050>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294130>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05153DD0>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05294610>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146630>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05146A10>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x051465F0>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'has_permission': True, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D90>}]"
+[2016-10-30 09:14:40] DEBUG [django.db.backends:89] (0.001) SELECT "django_admin_log"."id", "django_admin_log"."action_time", "django_admin_log"."user_id", "django_admin_log"."content_type_id", "django_admin_log"."object_id", "django_admin_log"."object_repr", "django_admin_log"."action_flag", "django_admin_log"."change_message", "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by", "django_content_type"."id", "django_content_type"."app_label", "django_content_type"."model" FROM "django_admin_log" INNER JOIN "auths_user" ON ("django_admin_log"."user_id" = "auths_user"."id") LEFT OUTER JOIN "django_content_type" ON ("django_admin_log"."content_type_id" = "django_content_type"."id") WHERE "django_admin_log"."user_id" = '4c7e4779b6bd47198afbd9e574b13d0a' ORDER BY "django_admin_log"."action_time" DESC LIMIT 10; args=('4c7e4779b6bd47198afbd9e574b13d0a',)
+[2016-10-30 09:15:03] DEBUG [django.db.backends:89] (0.001) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."client_id" = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61'; args=('1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61',)
+[2016-10-30 09:15:10] DEBUG [django.db.backends:89] (0.001) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."client_id" = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61'; args=('1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61',)
+[2016-10-30 09:15:18] DEBUG [django.db.backends:89] (0.001) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE ("django_session"."expire_date" > '2016-10-30 14:15:18.264358' AND "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94'); args=('2016-10-30 14:15:18.264358', 'pgck2gscn0q13d5polvhhon9bqdj1b94')
+[2016-10-30 09:15:18] DEBUG [django.db.backends:89] (0.000) SELECT "auths_user"."password", "auths_user"."last_login", "auths_user"."is_superuser", "auths_user"."username", "auths_user"."first_name", "auths_user"."last_name", "auths_user"."email", "auths_user"."is_staff", "auths_user"."is_active", "auths_user"."date_joined", "auths_user"."id", "auths_user"."last_hierarchy_id", "auths_user"."last_module_id", "auths_user"."person_id", "auths_user"."updated_at", "auths_user"."registered_by" FROM "auths_user" WHERE "auths_user"."id" = '4c7e4779b6bd47198afbd9e574b13d0a'; args=('4c7e4779b6bd47198afbd9e574b13d0a',)
+[2016-10-30 09:15:18] DEBUG [django.db.backends:89] (0.000) SELECT "django_session"."session_key", "django_session"."session_data", "django_session"."expire_date" FROM "django_session" WHERE "django_session"."session_key" = 'pgck2gscn0q13d5polvhhon9bqdj1b94'; args=('pgck2gscn0q13d5polvhhon9bqdj1b94',)
+[2016-10-30 09:15:18] DEBUG [django.db.backends:89] (0.000) BEGIN; args=None
+[2016-10-30 09:15:18] DEBUG [django.db.backends:89] (0.002) DELETE FROM "django_session" WHERE "django_session"."session_key" IN ('pgck2gscn0q13d5polvhhon9bqdj1b94'); args=('pgck2gscn0q13d5polvhhon9bqdj1b94',)
+[2016-10-30 09:15:18] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'registration/logged_out.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05270650>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x052704F0>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x05270DB0>, 'request': <WSGIRequest: GET '/admin/logout/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0526A3D8>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x05270D90>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'available_apps': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE570>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270ED0>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270E10>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052705F0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270730>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270950>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE590>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE3D0>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE4F0>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270630>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270B90>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE450>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270E90>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270910>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270710>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270D70>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270970>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE730>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Logged out'}]"
+[2016-10-30 09:15:18] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'registration/logged_out.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x05270650>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x052704F0>, 'user': <django.contrib.auth.models.AnonymousUser object at 0x05270DB0>, 'request': <WSGIRequest: GET '/admin/logout/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x0526A3D8>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x05270D90>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'available_apps': [{'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x043922B0>, 'app_label': 'auth', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE570>, 'object_name': 'Group', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/group/', 'add_url': '/admin/auth/group/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270ED0>, 'object_name': 'Permission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auth/permission/', 'add_url': '/admin/auth/permission/add/'}], 'app_url': '/admin/auth/'}, {'has_module_perms': True, 'name': 'Auths', 'app_label': 'auths', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270E10>, 'object_name': 'HierarchyType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchytype/', 'add_url': '/admin/auths/hierarchytype/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x052705F0>, 'object_name': 'Hierarchy', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/hierarchy/', 'add_url': '/admin/auths/hierarchy/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270730>, 'object_name': 'Menu', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/menu/', 'add_url': '/admin/auths/menu/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270950>, 'object_name': 'Person', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/person/', 'add_url': '/admin/auths/person/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE590>, 'object_name': 'UserHierarchyGroup', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchygroup/', 'add_url': '/admin/auths/userhierarchygroup/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE3D0>, 'object_name': 'UserHierarchyPermission', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/userhierarchypermission/', 'add_url': '/admin/auths/userhierarchypermission/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE4F0>, 'object_name': 'User', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/auths/user/', 'add_url': '/admin/auths/user/add/'}], 'app_url': '/admin/auths/'}, {'has_module_perms': True, 'name': 'Catalogo', 'app_label': 'catalogo', 'models': [{'name': 'Clientes', 'object_name': 'Cliente', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/cliente/', 'add_url': '/admin/catalogo/cliente/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270630>, 'object_name': 'Distribuidor', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/distribuidor/', 'add_url': '/admin/catalogo/distribuidor/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270B90>, 'object_name': 'Empresa', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/empresa/', 'add_url': '/admin/catalogo/empresa/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE450>, 'object_name': 'Presentacion', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/presentacion/', 'add_url': '/admin/catalogo/presentacion/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270E90>, 'object_name': 'Producto', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/catalogo/producto/', 'add_url': '/admin/catalogo/producto/add/'}], 'app_url': '/admin/catalogo/'}, {'has_module_perms': True, 'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04392310>, 'app_label': 'contenttypes', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270910>, 'object_name': 'ContentType', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/contenttypes/contenttype/', 'add_url': '/admin/contenttypes/contenttype/add/'}], 'app_url': '/admin/contenttypes/'}, {'has_module_perms': True, 'name': 'Django OAuth Toolkit', 'app_label': 'oauth2_provider', 'models': [{'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270710>, 'object_name': 'AccessToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/accesstoken/', 'add_url': '/admin/oauth2_provider/accesstoken/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270D70>, 'object_name': 'Application', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/application/', 'add_url': '/admin/oauth2_provider/application/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x05270970>, 'object_name': 'Grant', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/grant/', 'add_url': '/admin/oauth2_provider/grant/add/'}, {'name': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x054CE730>, 'object_name': 'RefreshToken', 'perms': {'change': True, 'add': True, 'delete': True}, 'admin_url': '/admin/oauth2_provider/refreshtoken/', 'add_url': '/admin/oauth2_provider/refreshtoken/add/'}], 'app_url': '/admin/oauth2_provider/'}], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Logged out'}]"
+[2016-10-30 09:15:21] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x054CEDF0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05270F30>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x054CEE30>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x05290E88>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x05294050>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'app_path': '/admin/login/?next=/admin/', 'next': '/admin/', 'available_apps': [], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Log in'}]"
+[2016-10-30 09:15:21] DEBUG [django.template:927] Exception while resolving variable 'is_popup' in template 'admin/login.html'.
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 883, in _resolve_lookup
+    current = current[bit]
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\context.py", line 77, in __getitem__
+    raise KeyError(key)
+KeyError: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 889, in _resolve_lookup
+    if isinstance(current, BaseContext) and getattr(type(current), bit):
+AttributeError: type object 'RequestContext' has no attribute 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 898, in _resolve_lookup
+    current = current[int(bit)]
+ValueError: invalid literal for int() with base 10: 'is_popup'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\pydev\marketsoft\ve_market\lib\site-packages\django\template\base.py", line 905, in _resolve_lookup
+    (bit, current))  # missing attribute
+django.template.base.VariableDoesNotExist: Failed lookup for key [is_popup] in "[{'True': True, 'None': None, 'False': False}, {'DEFAULT_MESSAGE_LEVELS': {'ERROR': 40, 'SUCCESS': 25, 'WARNING': 30, 'INFO': 20, 'DEBUG': 10}, 'messages': <django.contrib.messages.storage.fallback.FallbackStorage object at 0x054CEDF0>, 'perms': <django.contrib.auth.context_processors.PermWrapper object at 0x05270F30>, 'user': <SimpleLazyObject: <django.contrib.auth.models.AnonymousUser object at 0x054CEE30>>, 'request': <WSGIRequest: GET '/admin/login/?next=/admin/'>, 'csrf_token': <SimpleLazyObject: <function csrf.<locals>._get_val at 0x05290E88>>}, {}, {'LANGUAGE_BIDI': False, 'site': <django.contrib.sites.requests.RequestSite object at 0x05294050>, 'form': <AdminAuthenticationForm bound=False, valid=Unknown, fields=(username;password)>, 'LANGUAGE_CODE': 'en-us', 'site_url': '/', 'site_name': 'localhost:9000', 'app_path': '/admin/login/?next=/admin/', 'next': '/admin/', 'available_apps': [], 'has_permission': False, 'site_title': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385C90>, 'site_header': <django.utils.functional.lazy.<locals>.__proxy__ object at 0x04385D50>, 'title': 'Log in'}]"
+[2016-10-30 09:15:24] DEBUG [django.db.backends:89] (0.001) SELECT "oauth2_provider_application"."id", "oauth2_provider_application"."client_id", "oauth2_provider_application"."user_id", "oauth2_provider_application"."redirect_uris", "oauth2_provider_application"."client_type", "oauth2_provider_application"."authorization_grant_type", "oauth2_provider_application"."client_secret", "oauth2_provider_application"."name", "oauth2_provider_application"."skip_authorization" FROM "oauth2_provider_application" WHERE "oauth2_provider_application"."client_id" = '1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61'; args=('1mDR3zdKmNxeMHoqSJfOfX4JBwSvw93zRK2GaZ61',)
