@@ -1,19 +1,19 @@
 app
 // =========================================================================
-// Show View and Delete Autor 
+// Show View and Delete Categoria 
 // =========================================================================
-    .controller("AutorCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
+    .controller("ProductoCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.fields = 'nombre';
+    $scope.fields = 'name,codename';
     var params = {};
     $scope.lista = [];
-    $scope.autor = {};
+    $scope.categoria = {};
 
     $scope.list = function(params) {
         $scope.isLoading = true;
-        catalogoService.Autor.query(params, function(r) {
-            $scope.lista = r.results;
-            $scope.options = r.options;
+        catalogoService.Producto.query(params, function(r) {
+            $scope.lista = r;
+            //$scope.options = r.options;
             $scope.isLoading = false;
         }, function(err) {
             $log.log("Error in list:" + JSON.stringify(err));
@@ -35,9 +35,9 @@ app
 
     $scope.delete = function(d) {
         if ($window.confirm("Seguro?")) {
-            catalogoService.Autor.delete({ id: d.id }, function(r) {
-                $log.log("Se eliminó autor:" + JSON.stringify(d));
-                toastr.success('Se eliminó autor ' + d.nombre, 'Autor');
+            catalogoService.Producto.delete({ id: d.id }, function(r) {
+                $log.log("Se eliminó la producto:" + JSON.stringify(d));
+                toastr.success('Se eliminó la producto ' + d.nombre, 'Producto');
                 $scope.list(params);
             }, function(err) {
                 $log.log("Error in delete:" + JSON.stringify(err));
@@ -49,15 +49,15 @@ app
 })
 
 // =========================================================================
-// Create and Update Autor
+// Create and Update Categoria
 // =========================================================================
-.controller("AutorSaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
+.controller("ProductoSaveCtrl", function($scope, $state, $stateParams, catalogoService, $window, $mdDialog, $log, toastr) {
     //Valores iniciales
-    $scope.autor = {};
+    $scope.producto = {};
 
     $scope.sel = function() {
-        catalogoService.Autor.get({ id: $stateParams.id }, function(r) {
-            $scope.autor = r;
+        catalogoService.Producto.get({ id: $stateParams.id }, function(r) {
+            $scope.producto = r;
         }, function(err) {
             $log.log("Error in get:" + JSON.stringify(err));
             toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -68,20 +68,20 @@ app
     }
 
     $scope.save = function() {
-        if ($scope.autor.id) {
-            catalogoService.Autor.update({ id: $scope.autor.id }, $scope.autor, function(r) {
+        if ($scope.producto.id) {
+            catalogoService.Producto.update({ id: $scope.producto.id }, $scope.producto, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se editó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se editó la producto ' + r.nombre, 'Producto');
+                $state.go('catalogo.catalogo.producto');
             }, function(err) {
                 $log.log("Error in update:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
             });
         } else {
-            catalogoService.Autor.save($scope.autor, function(r) {
+            catalogoService.Producto.save($scope.producto, function(r) {
                 $log.log("r: " + JSON.stringify(r));
-                toastr.success('Se insertó autor ' + r.nombre, 'Autor');
-                $state.go('catalogo.catalogo.autores');
+                toastr.success('Se insertó la producto ' + r.nombre, 'Producto');
+                $state.go('catalogo.catalogo.producto');
             }, function(err) {
                 $log.log("Error in save:" + JSON.stringify(err));
                 toastr.error(err.data.detail, err.status + ' ' + err.statusText);
@@ -90,9 +90,6 @@ app
     };
 
     $scope.cancel = function() {
-        $state.go('catalogo.catalogo.autores');
-
-
-        
+        $state.go('catalogo.catalogo.producto');
     };
 });

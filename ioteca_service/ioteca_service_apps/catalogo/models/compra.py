@@ -25,6 +25,10 @@ class Cabecera(TimeStampModel):
     empresa = models.ForeignKey(Empresa)
     fecha = models.DateField(auto_now_add=True)
 
+    class Meta:
+        verbose_name = "Compras"
+        verbose_name_plural = "Compras"
+
     def __unicode__(self):
         return self.codigo
 

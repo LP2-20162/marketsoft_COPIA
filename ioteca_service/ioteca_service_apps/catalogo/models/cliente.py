@@ -15,10 +15,6 @@ class Cliente(models.Model):
     class Meta:
         verbose_name = "Cliente"
         verbose_name_plural = "Clientes"
-        permissions = (
-            ('list_autor', 'Can list Cliente'),
-            ('get_autor', 'Can get Cliente'),
-        )
 
     def __str__(self):
         return self.nombre

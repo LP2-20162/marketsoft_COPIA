@@ -10,13 +10,13 @@ app
         {
             "id": 5,
             "nombre": " 5",
-            "codigo": "05",
-            "estado": true
+            "lote": "o5",
+            
         }, {
             "id": 7,
             "nombre": "s",
-            "codigo": "s",
-            "estado": false
+            "lote": "s",
+          
         }
     ];
 });

@@ -26,11 +26,8 @@ class Producto(models.Model):
         ('comercial', 'Comercial'),
     )
     lote = models.CharField(max_length=10, unique=True, default=0)
-    presentacion = models.ForeignKey(Presentacion)
-    tipo = models.CharField(choices=TIPO, max_length=30)
+    presentancion = models.ForeignKey(Presentacion)
     nombre = models.CharField(max_length=200, unique=True)
-    componente = models.CharField(max_length=200)
-    concentracion = models.CharField(max_length=50)
     sanitario = models.CharField(max_length=200)
     fecha_expiracion = models.DateField()
     fecha_produccion = models.DateField()
@@ -40,7 +37,6 @@ class Producto(models.Model):
     precio_venta = models.DecimalField(
         max_digits=5, decimal_places=2, default=0.00)
     stock = models.PositiveSmallIntegerField()
-    igv = models.DecimalField(max_digits=6, decimal_places=3, default=0.000)
 
     def __unicode__(self):
         return self.nombre

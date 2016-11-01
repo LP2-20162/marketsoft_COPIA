@@ -3,17 +3,17 @@ from django.db.models import Q
 from operator import __or__ as OR
 from functools import reduce
 
-from ioteca_service_apps.catalogo.models.compra import DetalleCompra
+from ioteca_service_apps.catalogo.models.compra import Cabecera
 
 
 class CompraSerializer(serializers.ModelSerializer):
     class Meta:
-        model = DetalleCompra
+        model = Cabecera
         # fields = ('url', 'username', 'email', 'is_staff')
 
 
 class CompraViewSet(viewsets.ModelViewSet):
-    queryset = DetalleCompra.objects.all()
+    queryset = Cabecera.objects.all()
     serializer_class = CompraSerializer
 
     def get_queryset(self):

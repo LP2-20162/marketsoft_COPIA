@@ -4,11 +4,11 @@ app
     var url = configCatalogo.catalogoUrl;
     return {
 
-        Categoria: $resource(url + "categorias/:id/", { 'id': '@id' }, {
+        Categoria: $resource(url + "producto/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
 
         }),
-        Autor: $resource(url + "autors/:id/", { 'id': '@id' }, {
+        Autor: $resource(url + "cliente/:id/", { 'id': '@id' }, {
             "update": { method: 'PUT' },
             "query": {
                 method: 'GET',
