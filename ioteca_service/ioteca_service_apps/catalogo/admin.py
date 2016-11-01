@@ -4,6 +4,8 @@ from .models.cliente import Cliente
 from .models.producto import Producto
 from .models.distribuidor import Distribuidor
 from .models.empresa import Empresa
+from .models.compra import DetalleCompra
+from .models.compra import Cabecera
 # Register your models here.
 
 
@@ -38,3 +40,13 @@ class EmpresaAdmin(admin.ModelAdmin):
 class DistribuidorAdmin(admin.ModelAdmin):
     list_display = ('nombre', 'ruc')
     search_fields = ('codigo', 'nombre')
+
+
+class producto_compraInline(admin.TabularInline):
+    model = DetalleCompra
+
+
+class compraAdmin(admin.ModelAdmin):
+    inlines = (producto_compraInline,)
+
+admin.site.register(Cabecera, compraAdmin)
