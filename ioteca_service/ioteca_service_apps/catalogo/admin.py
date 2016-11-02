@@ -6,6 +6,7 @@ from .models.distribuidor import Distribuidor
 from .models.empresa import Empresa
 from .models.compra import DetalleCompra
 from .models.compra import Cabecera
+from .models.venta import todo_item, Cabecera_Venta
 # Register your models here.
 
 
@@ -50,3 +51,13 @@ class compraAdmin(admin.ModelAdmin):
     inlines = (producto_compraInline,)
 
 admin.site.register(Cabecera, compraAdmin)
+
+
+class producto_ventaInline(admin.TabularInline):
+    model = todo_item
+
+
+class Detalle_VentaAdmin(admin.ModelAdmin):
+    inlines = (producto_ventaInline,)
+
+admin.site.register(Cabecera_Venta, Detalle_VentaAdmin)
